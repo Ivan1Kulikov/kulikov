@@ -28,7 +28,7 @@ stepF=1;
 for f=F %движение по столбцам (по частотам на конкретном времени)
     
     for t=2:length(signal)
-        tempSignal=signal(t)*exp(-1j*2*pi*f*t*10^-10)+Sp(t-1,stepF);
+        tempSignal=signal(t)*exp(-1j*2*pi*f*t*10^-10);
         Sp(t,stepF)=tempSignal;
     end
 
