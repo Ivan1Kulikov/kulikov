@@ -1,8 +1,8 @@
 clear, clc, close all
 time_array=10^-5;%суммарная длительность сигнала
-time_step=4*10^-9/3;%дискретизация сигнала
+time_step=10^-9;%дискретизация сигнала
 freq_step=1/time_step;
-freq=10^8;
+freq=10^5;
 signal=[];
 
 %function [signal, NumberPeriods,time_point, numberPoints]=sin_gen(Ampl,freq,Time_array,phase,time_begin,time_end,step
