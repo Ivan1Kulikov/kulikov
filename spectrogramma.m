@@ -16,15 +16,17 @@ end
 
 figure(1); plot(time_point,signal);
 
-A=fft(signal,length(signal));
+figure(2); [Sp,F,T]=WindowFourierTrans(signal,i*freq,freq/3,NumberPeriods*10);
+
+%A=fft(signal,length(signal));
 % A=fftshift(A);
- figure(2); plot(abs(A));
+ %figure(2); plot(abs(A));
 
- [Sp,F,T]= spectrogram(signal,rectwin(numberPoints1/30*5),0,1000,freq);
- figure(3);contourf(F,T,abs(Sp'));
+% [Sp,F,T]= spectrogram(signal,rectwin(numberPoints1/30*5),0,1000,freq);
+ %figure(3);contourf(F,T,abs(Sp'));
 
- figure(4);spectrogram(signal,rectwin(1000),0,1000,freq);
+ %figure(4);spectrogram(signal,rectwin(1000),0,1000,freq);
  
 %function [Sp,T,F]=fourierTrans(signal,max_freq)
-[Sp,T,F]=fourierTrans(signal,freq*5);
-figure(5);contourf(T,F,abs(Sp'));
+%[Sp,T,F]=fourierTrans(signal,freq*5);
+%figure(5);contourf(T,F,abs(Sp'));
